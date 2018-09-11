@@ -44,3 +44,24 @@ Fizz
 Fizz
 Buzz
 """
+num=int(input("How many numbers shall we print? "))
+fizz=int(input("For multiples of what number shall we print 'Fizz'? "))
+buzz=int(input("For multiples of what number shall we print 'Buzz'? "))
+
+y=[]
+x=[]
+for i in range (1, num+1):
+    y+=[i*fizz]
+    x+=[i*buzz]
+    if (not (i in x) and not (i in y)):
+        print(i)
+    if ((i in x) and not (i in y)):
+        print("Buzz")
+    if (not (i in x) and (i in y)):
+        print("Fizz")
+    if (i in x) and (i in y):
+        print("FizzBuzz")
+    
+
+
+
